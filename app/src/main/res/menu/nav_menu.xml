@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/ic_home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Home"
+        />
+
+    <item
+        android:id="@+id/ic_compass"
+        android:icon="@drawable/ic_compass"
+        android:title="Qiblat Finder"
+        />
+
+    <item
+        android:id="@+id/ic_map"
+        android:icon="@drawable/ic_map"
+        android:title="Distance to Makkah"
+        />
+
+    <item
+        android:id="@+id/ic_profile"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="Profile"
+        />
+
+
+</menu>
