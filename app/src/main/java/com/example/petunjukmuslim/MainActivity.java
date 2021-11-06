@@ -1,5 +1,6 @@
 package com.example.petunjukmuslim;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -12,18 +13,26 @@ import com.example.petunjukmuslim.fragment.MapsFragment;
 import com.example.petunjukmuslim.fragment.ProfileFragment;
 import com.example.petunjukmuslim.fragment.QiblatFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;
-
+    FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        //set default when fragment when apps start
-        getSupportFragmentManager().beginTransaction().replace(R.id.fl_wrapper,new HomeFragment()).commit();
+        mAuth = FirebaseAuth.getInstance();
+        FirebaseUser user = mAuth.getCurrentUser();
+        if (user == null){
+            startActivity(new Intent(MainActivity.this, LoginActivity.class));
+        }else
+            {
+                //set default when fragment when apps start
+                getSupportFragmentManager().beginTransaction().replace(R.id.fl_wrapper,new HomeFragment()).commit();
+            }
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
 
