@@ -15,17 +15,18 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="50dp"
+            android:fontFamily="sans-serif-black"
             android:text="Malaysia Clock"/>
 
         <TextClock
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="80dp"
             android:fontFamily="sans-serif-black"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="40sp"
+            android:textSize="30sp"
             android:textStyle="bold"
             android:format12Hour="hh:mm:ss a"/>
 
@@ -34,21 +35,30 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="150dp"
+            android:fontFamily="sans-serif-black"
             android:text="Makkah Clock"/>
 
         <TextClock
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="250dp"
+            android:layout_marginTop="180dp"
             android:fontFamily="sans-serif-black"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="40sp"
+            android:textSize="30sp"
             android:textStyle="bold"
             android:timeZone="Asia/Riyadh"
             android:format12Hour="hh:mm:ss a"/>
+
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="250dp"
+            android:background="@color/white"/>
 
 
     </RelativeLayout>
