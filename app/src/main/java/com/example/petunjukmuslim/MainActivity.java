@@ -1,26 +1,21 @@
 package com.example.petunjukmuslim;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
-import android.widget.Toolbar;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import com.example.petunjukmuslim.fragment.AboutUsFragment;
 import com.example.petunjukmuslim.fragment.HomeFragment;
 import com.example.petunjukmuslim.fragment.MapsFragment;
-import com.example.petunjukmuslim.fragment.ProfileFragment;
 import com.example.petunjukmuslim.fragment.QiblatFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-
-import java.security.acl.Group;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -67,8 +62,8 @@ public class MainActivity extends AppCompatActivity {
                     fragment = new QiblatFragment();
                     break;
 
-                case R.id.ic_profile:
-                    fragment = new ProfileFragment();
+                case R.id.ic_aboutus:
+                    fragment = new AboutUsFragment();
                     break;
             }
 
